@@ -47,3 +47,15 @@ ul.appendChild(liFour);
 
 section.appendChild(ul);
 parentContainer.appendChild(section);
+
+
+// Set Inner HTML directly
+const sectionThree = document.createElement ("section");
+sectionThree.innerHTML = `
+<h1> New Divisions in List </h1>
+<ul>
+    <li> Padma </li>
+    <li> Meghna </li>
+</ul>
+`
+parentContainer.appendChild (sectionThree);
