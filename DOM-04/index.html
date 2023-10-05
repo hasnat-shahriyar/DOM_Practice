@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event DOM 2 | Event bubble</title>
+</head>
+<body>
+
+    <button onclick="document.body.style.backgroundColor='darkblue'">BLUE</button> <!--Option 1-->
+    <br>
+    <button onclick="makeRed()">RED!</button> <!--Option 2-->
+    <br>
+    <button id="make-tomato">Tomato</button> <!--Option 3-->
+    <br>
+    <button id="make-cyan">Cyan</button> <!--Option 4-->
+    <br>
+    <button id="make-green">Green</button> <!--Option 4 V2-->
+    <br>
+    <button id="make-goldenrod">Golden Rod</button> <!--Option 4 V3 | Final-->
+    <script>
+        // Option 2
+        function makeRed (){
+            document.body.style.backgroundColor = "darkred";
+        }
+
+    </script>
+    <script src="JS/events.js"></script> <!--Option 3-->
+</body>
+</html>
