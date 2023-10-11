@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM input</title>
+</head>
+<body>
+    <input type="text" id="field1">
+    <input type="text" id="field2">
+    <button onclick="AddTwo()">ADD</button>
+
+    <script>
+        function AddTwo (){
+            var x = document.getElementById ("field1").value;
+            var y = document.getElementById ("field2").value;
+            var z = parseFloat(x) + parseFloat (y);
+            alert (z);
+        }
+    </script>
+</body>
+</html>
