@@ -6,16 +6,39 @@
     <title>DOM input</title>
 </head>
 <body>
+    <!-- Display result will be shown here -->
+    <h1 id="display-result">00</h1>
+    
+    <!-- Input fields for user to enter numbers -->
     <input type="text" id="field1">
     <input type="text" id="field2">
+    
+    <!-- Button to trigger the addition and display the result -->
     <button onclick="AddTwo()">ADD</button>
-
+    
     <script>
-        function AddTwo (){
-            var x = document.getElementById ("field1").value;
-            var y = document.getElementById ("field2").value;
-            var z = parseFloat(x) + parseFloat (y);
-            alert (z);
+        // JavaScript function to add two numbers and update the display
+        function AddTwo(){
+            // Retrieve the values from input fields
+            var x = document.getElementById("field1").value;
+            var y = document.getElementById("field2").value;
+            
+            // Convert input values to numbers and add them
+            var z = parseFloat(x) + parseFloat(y);
+            
+            // Display the result in an alert
+            alert(z);
+            
+            // Get the element where the result will be displayed
+            var displayElement = document.getElementById("display-result");
+            
+            // Get the previous total from the display element
+            var displayTotalString = displayElement.innerText;
+            var previousTotal = parseFloat(displayTotalString);
+
+            // Set the new total in the display element
+            const newTotal = z;
+            displayElement.innerText = newTotal;
         }
     </script>
 </body>
