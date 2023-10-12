@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Create Element Append Element</title>
+</head>
+<body>
+    <section class="text-center mt-16 text-rose-600">
+        <ul id="myItem" class=""></ul>
+        <br>
+        <input type="text" id="myInput" class="bg-blue-200 outline-none text-rose-600 p-1">
+        <br>
+        <button onclick="addItem()" class="mt-6 bg-blue-400 text-white p-4 rounded-full hover:bg-rose-600 ease-in-out duration-300">ADD</button>
+    </section>
+<script>
+    function addItem (){
+        let inputValue = document.getElementById ("myInput").value;
+        let createListItem = document.createElement("li");
+        createListItem.innerHTML = inputValue;
+        let myItem = document.getElementById ("myItem");
+        myItem.appendChild(createListItem);
+    }
+</script>
+</body>
+</html>
