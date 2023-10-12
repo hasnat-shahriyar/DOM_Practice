@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Query Selector</title>
+</head>
+<body>
+    <h1 id = "myID">h1</h1>
+    <h2 class = "myClass">h2</h2>
+    <p name="myName">p</p>
+    <h3>h3</h3>
+    <button onclick="FindElements()">Execute</button>
+    <script>
+        function FindElements (){
+            document.querySelector("h3").innerHTML="h3 manipulated";
+            document.querySelector(".myClass").innerHTML="h2 manipulated";
+            document.querySelector("#myID").innerHTML="h1 manipulated";
+            document.querySelector('p[name="myName"]').innerHTML="p manipulated";
+        }
+    </script>
+</body>
+</html>
