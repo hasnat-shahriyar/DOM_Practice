@@ -6,4 +6,9 @@ for (const section of sections){
     section.style.width = "500px";
     section.style.textAlign = "center";
     section.style.backgroundColor = "#030345";
+
 }
+
+let li = document.createElement("li");
+li.innerText = "Mango";
+
